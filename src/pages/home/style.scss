@@ -1,0 +1,32 @@
+@import "@css/colors";
+
+.home-error-service-container {
+  text-align: center;
+  border: 1px solid $color9;
+  width: 100%;
+  background-color: $color2;
+  border-radius: 4px;
+  padding: 40px;
+}
+
+.home-error-service-title {
+  color: $color1;
+  font-size: 25px;
+  margin-bottom: 0;
+}
+
+.home-error-service-icon {
+  color: $color8 !important;
+  font-size: 100px;
+  margin-bottom: 30px;
+}
+
+.laniakea-home-main-title {
+  font-weight: 500;
+  color: $color1;
+  font-size: 25px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  text-align: center;
+}

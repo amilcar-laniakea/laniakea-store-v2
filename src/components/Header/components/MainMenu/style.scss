@@ -1,0 +1,92 @@
+/** @format */
+
+@import "@css/colors";
+@import "@css/fonts";
+
+.navbar-menu-main-container {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  margin: 0;
+}
+
+.navbar-menu-link,
+.navbar-menu-link:hover {
+  color: $color2;
+  text-decoration: none;
+}
+
+.navbar-menu-item {
+  font-size: $font1;
+  padding: 10px;
+  color: $color2;
+  font-weight: 600;
+  cursor: pointer;
+  line-height: 25px;
+}
+
+.navbar-menu-categories-title {
+  text-transform: capitalize;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: $color1;
+  font-size: 15px;
+}
+
+.navbar-menu-categories-button {
+  background-color: transparent !important;
+  border: none !important;
+  color: $color2;
+  font-size: $font1;
+  font-weight: 600 !important;
+  padding: 10px !important;
+  box-shadow: $shadow-disabled;
+  line-height: 25px;
+  cursor: pointer;
+  align-items: center;
+  display: flex;
+}
+
+.navbar-menu-categories-button span {
+  margin-left: 2px;
+}
+
+.navbar-menu-container {
+  position: fixed !important;
+  width: 100% !important;
+  max-width: 135px !important;
+  top: 60px !important;
+  margin: 0 !important;
+}
+.loading-categories-icon {
+  padding: 15px !important;
+  text-align: center !important;
+  width: 100% !important;
+}
+
+.error-categories-container {
+  text-align: center;
+  padding: 10px;
+}
+
+.error-categories-icon {
+  color: $color8;
+  font-size: 25px;
+  opacity: 0.7;
+}
+
+.error-categories-title {
+  color: $color3;
+  font-style: italic;
+}
+
+.categories-icon-container {
+  padding: 3px;
+  margin-right: 5px;
+}
+
+.categories-icon {
+  width: 100%;
+  max-width: 20px;
+}

@@ -1,0 +1,54 @@
+@import "@css/colors";
+@import "@css/vars";
+
+.navbar-vertical-spacer {
+  height: 65px;
+}
+
+.navbar-global-container {
+  width: 100%;
+  background-color: $color1;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  max-height: 65px;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.navbar-main-container {
+  width: 100%;
+  max-width: $max-content;
+  margin: auto;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-info-help {
+  color: $color2;
+  font-size: 15px;
+  margin-left: 10px;
+}
+
+.navbar-main-menu-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 601px) {
+  .navbar-drawer-container {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar-main-menu-container {
+    display: none;
+  }
+}

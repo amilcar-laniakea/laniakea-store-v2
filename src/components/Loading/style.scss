@@ -1,0 +1,14 @@
+@import "@css/colors";
+
+.loading-general {
+  color: $color8;
+  min-height: calc(100vh - 107px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-general-icon {
+  color: $color1;
+  margin-top: -120px;
+}

@@ -1,0 +1,65 @@
+@import "@css/colors";
+
+.order-historial-list-container {
+  border: 1px solid $color9;
+  background-color: $color12;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  padding: 10px 20px;
+}
+
+.order-historial-list-text-container {
+  padding: 10px;
+}
+
+.order-historial-list-title {
+  font-size: 15px;
+  text-align: justify;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+.order-historial-list-span {
+  font-weight: 600;
+}
+
+.order-historial-list-cart-container {
+  border: 1px solid $color9;
+  background-color: $color;
+  border-radius: 5px;
+  padding: 4px 10px;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-bottom: 5px;
+}
+
+.order-historial-list-cart-image-container {
+  padding: 10px;
+  width: 100%;
+  max-width: 200px;
+  filter: grayscale(75%);
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.order-historial-list-cart-image-container:hover {
+  filter: none;
+  transition: 0.3s ease;
+}
+
+.order-historial-list-cart-image {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.order-historial-list-cart-text-container {
+  padding: 10px;
+}
+
+.order-historial-list-cart-title {
+  color: $color4;
+  font-size: 14px;
+  text-align: justify;
+  font-weight: 400;
+  margin-bottom: 0;
+}

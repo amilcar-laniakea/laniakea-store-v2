@@ -1,0 +1,15 @@
+@import "@css/colors";
+
+.cart-delete-item {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  color: $color1;
+  font-size: 22px;
+  transition: 0.5s ease !important;
+}
+
+.cart-delete-item:hover {
+  color: $color10;
+  transition: 0.5s ease !important;
+}

@@ -1,0 +1,24 @@
+@import "@css/colors";
+
+.error-service-container {
+  min-height: calc(100vh - 157px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.error-service-inner-container {
+  text-align: center;
+}
+
+.error-service-icon {
+  color: $color8;
+  font-size: 100px;
+  margin-bottom: 30px;
+}
+
+.error-service-title {
+  color: $color1;
+  font-size: 25px;
+  margin-bottom: 0;
+}

@@ -1,0 +1,17 @@
+$font1: 1.2rem !important;
+$font2: 2rem !important;
+
+.laniakea-main-title-global {
+  margin-bottom: 0;
+  font-weight: 500;
+  font-style: italic;
+  color: $color1;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .laniakea-main-title-global {
+    font-size: 24px;
+  }
+}

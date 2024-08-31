@@ -1,0 +1,29 @@
+/** @format */
+
+@import "@css/colors";
+
+.cart-navbar-main-container {
+  position: relative;
+}
+
+.cart-main-icon {
+  color: $color2;
+  font-size: 26px;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.cart-navbar-quantity {
+  position: absolute;
+  top: -10px;
+  right: -5px;
+  color: $color1;
+  font-weight: 900;
+  font-size: 15px;
+  line-height: 15px;
+  background-color: $color2;
+  border-radius: 100px;
+  padding: 4px 4px;
+  min-width: 25px;
+  text-align: center;
+}

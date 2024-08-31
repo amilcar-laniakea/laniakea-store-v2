@@ -1,0 +1,13 @@
+@import "@css/colors";
+
+.main-banners-loading-container {
+  height: calc(100vh - 117px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-banners-icon {
+  color: $color1;
+  font-size: 30px;
+}

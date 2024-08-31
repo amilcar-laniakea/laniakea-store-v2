@@ -1,0 +1,80 @@
+@import "@css/colors";
+
+.cart-clear-button,
+.cart-clear-button:focus,
+.cart-clear-button:active {
+  border: 1px solid $color3;
+  background-color: $color3;
+  padding: 7px 15px !important;
+  height: auto !important;
+  color: $color2;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  border-radius: 10px !important;
+  align-items: center;
+  display: flex !important;
+  transition: 0.5s ease !important;
+  margin-bottom: 10px;
+}
+
+.cart-clear-button:hover {
+  background-color: $color;
+  color: $color1;
+  transition: 0.5s ease !important;
+}
+
+.cart-clear-item {
+  margin-right: 5px;
+  font-size: 20px;
+}
+
+.cart-clear-modal-container .ant-modal-content {
+  border-radius: 5px;
+}
+
+.cart-clear-modal-container .ant-modal-close-x:hover {
+  color: $color1;
+}
+
+.cart-clear-modal-container .ant-modal-body {
+  text-align: center;
+  padding: 20px;
+}
+
+.cart-clear-modal-container .ant-modal-footer {
+  display: none;
+}
+
+.cart-clear-modal-main-title {
+  margin-top: 10px;
+  color: $color1 !important;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+.cart-clear-modal-main-subtitle {
+  color: $color8;
+  font-style: italic;
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+
+.cart-clear-modal-button {
+  margin: auto;
+  height: 31px !important;
+  padding: 0px 20px !important;
+  font-size: 13px !important;
+  border-radius: 5px !important;
+  border: 1px solid $color1;
+  background-color: $color1;
+  color: $color2;
+  font-weight: 500 !important;
+  transition: 0.5s ease !important;
+}
+
+.cart-clear-modal-button:hover {
+  background-color: $color;
+  color: $color1;
+  transition: 0.5s ease !important;
+}

@@ -1,0 +1,64 @@
+@import "@css/colors";
+
+.main-lk-slider {
+  position: absolute;
+  top: 50%;
+  margin-top: -10px;
+  cursor: pointer;
+  background: $color13;
+  color: $color2;
+  border-radius: 100%;
+  font-size: 15px;
+  padding: 0px 4px;
+  z-index: 1;
+}
+
+.ph-arrow-right {
+  right: 10px;
+}
+
+.ph-arrow-left {
+  left: 10px;
+}
+
+.main-lk-slider-container .slick-slide a {
+  box-shadow: 0 2px 1px -1px rgb(0 0 0 / 12%), 0 1px 1px 0 rgb(0 0 0 / 14%),
+    0 1px 3px 0 rgb(0 0 0 / 12%);
+}
+
+.main-lk-slider-cart .slick-list {
+  border-radius: 4px;
+}
+
+.main-lk-slider-title {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  color: $color2;
+  text-shadow: 2px 2px 2px $color14;
+  font-size: 50px;
+  font-style: italic;
+  z-index: 1;
+}
+
+.main-lk-slider-pre-bg {
+  background-color: $color15;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 0;
+}
+
+.main-lk-slider-image {
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .main-lk-slider-title {
+    top: 35%;
+    font-size: 25px;
+  }
+}

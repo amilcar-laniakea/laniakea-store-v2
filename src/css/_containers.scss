@@ -1,0 +1,19 @@
+@import "./vars";
+@import "./colors";
+@import "./fonts";
+
+.global-container {
+  width: 100%;
+  margin: auto;
+  max-width: $max-content;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.global-container {
+  min-height: $min-height-app;
+}
+
+.global-spacer {
+  flex-grow: 1 !important;
+}

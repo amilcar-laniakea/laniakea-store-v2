@@ -1,0 +1,101 @@
+@import "@css/colors";
+
+.cart-notification-global-container {
+  border-radius: 5px !important;
+  padding: 15px 15px !important;
+  width: 485px !important;
+}
+
+.cart-notification-global-container .ant-notification-notice-icon-success {
+  display: none;
+}
+
+.cart-notification-global-container .ant-notification-close-icon:hover {
+  color: $color1;
+}
+
+.cart-notification-image-global-container {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-notification-image-main-container {
+  overflow: hidden;
+  max-width: 130px;
+  border-radius: 5px;
+}
+
+.cart-notification-image {
+  width: 130%;
+  position: relative;
+  right: 15%;
+}
+
+.cart-notification-text-global-container {
+  padding-left: 15px;
+}
+
+.cart-notification-global-container .ant-notification-notice-message {
+  margin-left: 5px !important;
+  font-size: 15px !important;
+  font-weight: 700;
+  color: $color1;
+}
+
+.cart-notification-global-container .ant-notification-notice-description {
+  margin-left: 5px !important;
+}
+
+.cart-notification-main-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.cart-notification-product-name {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+.cart-notification-product-amount {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+.cart-notification-product-single-price {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+.cart-notification-product-total-price {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+.cart-notification-span {
+  font-weight: 600;
+}
+
+.cart-notification-button-container {
+  width: 100%;
+  text-align: right;
+}
+
+.cart-notification-button {
+  background-color: $color1;
+  color: $color2;
+  border: 1px solid $color1;
+  border-radius: 4px !important;
+  transition: 0.5s ease !important;
+}
+
+.cart-notification-button:hover {
+  background-color: $color;
+  color: $color1;
+  transition: 0.5s ease !important;
+}

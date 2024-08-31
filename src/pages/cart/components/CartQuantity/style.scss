@@ -1,0 +1,47 @@
+@import "@css/colors";
+
+.cart-quantity-container {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart-quantity-button {
+  padding: 0px 11px !important;
+  font-size: 13px !important;
+  border-radius: 4px !important;
+  border: 1px solid $color11;
+  background-color: $color10;
+  color: $color2;
+  transition: 0.5s ease !important;
+}
+
+.cart-quantity-button:hover {
+  background-color: $color;
+  color: $color1;
+  border: 1px solid $color1;
+  transition: 0.5s ease !important;
+}
+
+.cart-quantity-container .cart-quantity-form {
+  width: 100%;
+  max-width: 40px;
+}
+
+.cart-quantity-container .detail-quantity-form-input {
+  text-align: center;
+}
+
+.detail-quantity-form-input[disabled] {
+  color: $color3;
+  background-color: $color2;
+  cursor: pointer;
+}
+
+.cart-quantity-form .ant-form-item {
+  margin-bottom: 0;
+  max-width: 40px;
+}

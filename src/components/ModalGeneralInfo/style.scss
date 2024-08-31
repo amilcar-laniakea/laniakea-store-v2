@@ -1,0 +1,50 @@
+@import "@css/colors";
+
+.general-info-modal .ant-modal-content {
+  border-radius: 5px;
+}
+
+.general-info-modal .ant-modal-close-x:hover {
+  color: $color1;
+}
+
+.general-info-modal .ant-modal-header {
+  border-radius: 5px 5px 0 0;
+  border-bottom: 0;
+  padding: 15px 15px 5px;
+}
+
+.general-info-modal .ant-modal-body {
+  padding: 10px 15px 0px;
+}
+
+.general-info-modal .ant-modal-title {
+  font-size: 15px;
+  color: $color5;
+  font-weight: 600;
+}
+
+.general-info-modal-title {
+  font-size: 14px;
+  font-weight: 400;
+  color: $color1;
+}
+
+.general-info-modal .ant-modal-footer {
+  border-top: 0;
+  padding: 5px 15px 15px;
+}
+
+.general-info-modal .ant-btn-primary {
+  border: 1px solid $color1;
+  background-color: $color1;
+  color: $color2;
+  transition: 0.5s ease !important;
+  margin-left: 0 !important;
+}
+
+.general-info-modal .ant-btn-primary:hover {
+  background-color: $color;
+  color: $color1;
+  transition: 0.5s ease !important;
+}

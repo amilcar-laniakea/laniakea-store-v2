@@ -1,0 +1,47 @@
+@import "@css/colors";
+
+.mobile-drawer-button,
+.mobile-drawer-button:hover,
+.mobile-drawer-button:focus,
+.mobile-drawer-button:active {
+  background-color: $color1;
+  color: $color2;
+  border-color: $color1;
+  margin-right: 7px;
+}
+
+.mobile-drawer-button-icon {
+  font-size: 23px !important;
+}
+
+.drawer-menu-main-container {
+  border: none !important;
+  padding: 0 20px;
+}
+
+.drawer-menu-container {
+  margin-bottom: 4px;
+}
+
+.drawer-main-menu-item-icon {
+  margin-right: 6px;
+}
+
+.drawer-main-menu-item-container {
+  padding: 0 5px;
+  margin-bottom: 7px;
+}
+
+.drawer-main-menu-item {
+  color: $color1;
+  font-size: 15px;
+}
+
+.drawer-global-container .ant-drawer-header {
+  background-color: $color1;
+}
+
+.drawer-global-container .ant-drawer-title {
+  color: $color2;
+  font-size: 18px;
+}
