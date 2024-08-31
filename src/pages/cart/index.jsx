@@ -10,7 +10,7 @@ import { cartPrice } from "@utils/isCartPrice";
 import CartQuantity from "./components/CartQuantity";
 import CartDeleteProduct from "./components/CartDeleteProduct";
 import CartClear from "./components/CartClear";
-// import CheckCartModal from "./components/CheckCartModal";
+import CheckCartModal from "./components/CheckCartModal";
 import "./style.scss";
 
 const Cart = () => {
@@ -134,7 +134,7 @@ const Cart = () => {
                   <h2 className="cart-payment-total-price">
                     ${cartPrice(isCart)}
                   </h2>
-                  {/*    <CheckCartModal cart={isCart} /> */}
+                  <CheckCartModal cart={isCart} />
                 </div>
               </Col>
             </Row>

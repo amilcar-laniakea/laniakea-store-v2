@@ -5,6 +5,7 @@ import {
   where,
   doc,
   getDoc,
+  orderBy,
 } from "firebase/firestore";
 import { db } from "@fireb";
 import { isValidObject } from "./isValidObject";
@@ -27,9 +28,15 @@ const get = async (collectionName, queryParams) => {
     hasAttributes = Object.keys(queryParams).length > 0;
 
   if (hasAttributes) {
-    whereParams = Object.keys(queryParams).map((key) =>
-      where(key, "==", queryParams[key])
-    );
+    whereParams = Object.keys(queryParams).map((key) => {
+      if (
+        key === "date" &&
+        (queryParams[key] === "desc" || queryParams[key] === "asc")
+      ) {
+        return orderBy(key, queryParams[key]);
+      }
+      return where(key, "==", queryParams[key]);
+    });
   }
 
   const collectionRequest = collection(db, collectionName);

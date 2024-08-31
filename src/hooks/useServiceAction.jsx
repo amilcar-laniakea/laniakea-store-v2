@@ -1,8 +1,11 @@
-import { useEffect, useState, useRef, useMemo } from "react";
-
+import { useEffect, useState, useRef, useMemo, useCallback } from "react";
 import ServiceAction from "@utils/services";
 
-const useServiceAction = ({ collectionName, queryParams }) => {
+const useServiceAction = ({
+  collectionName,
+  queryParams,
+  autoFetch = true,
+}) => {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -13,33 +16,40 @@ const useServiceAction = ({ collectionName, queryParams }) => {
     [queryParams]
   );
 
-  useEffect(() => {
-    const fetchData = async () => {
-      if (!loadingRef.current) setLoading(true);
+  const fetchData = useCallback(async () => {
+    return new Promise((resolve) => {
+      (async () => {
+        if (!loadingRef.current) setLoading(true);
 
-      let serviceParams = { collectionName };
+        let serviceParams = { collectionName };
 
-      if (memoizedQueryParams) {
-        serviceParams = {
-          ...serviceParams,
-          queryParams: JSON.parse(memoizedQueryParams),
-        };
-      }
+        if (memoizedQueryParams) {
+          serviceParams = {
+            ...serviceParams,
+            queryParams: JSON.parse(memoizedQueryParams),
+          };
+        }
 
-      const response = await ServiceAction(serviceParams);
+        const response = await ServiceAction(serviceParams);
 
-      if (response.status === "success") {
-        setData(response.data);
-      } else {
-        setError(response.error);
-      }
-      setLoading(false);
-      loadingRef.current = false;
-    };
-    fetchData();
+        if (response.status === "success") {
+          setData(response.data);
+          resolve(response.data);
+        } else {
+          setError(response.error);
+          resolve(null);
+        }
+        setLoading(false);
+        loadingRef.current = false;
+      })();
+    });
   }, [collectionName, memoizedQueryParams]);
 
-  return { data, error, loading };
+  useEffect(() => {
+    if (autoFetch) fetchData();
+  }, [fetchData, autoFetch]);
+
+  return { data, error, loading, fetchData };
 };
 
 export default useServiceAction;

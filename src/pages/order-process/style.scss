@@ -13,8 +13,18 @@
   text-align: center;
 }
 
-.order-success-icon {
+.order-error-icon {
   color: $color8;
+  font-size: 100px;
+}
+
+.order-warning-icon {
+  color: $color17;
+  font-size: 100px;
+}
+
+.order-success-icon {
+  color: $color16;
   font-size: 100px;
 }
 
@@ -29,4 +39,6 @@
   font-size: 20px;
   margin-bottom: 0;
   font-style: italic;
+  width: 100%;
+  max-width: 600px;
 }

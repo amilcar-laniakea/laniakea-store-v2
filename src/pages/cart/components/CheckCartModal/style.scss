@@ -1,26 +1,24 @@
-/** @format */
-
-@import '../../../../assets/scss/components/colors';
+@import "@css/colors";
 
 .cart-payment-button,
 .cart-payment-button:focus,
 .cart-payment-button:active {
-	border: 1px solid #00364e !important;
-	background-color: #00364e !important;
-	padding: 10px 35px !important;
-	height: auto !important;
-	color: #ffffff !important;
-	font-size: 15px !important;
-	font-weight: 500 !important;
-	border-radius: 5px !important;
-	align-items: center;
-	display: flex !important;
-	transition: 0.5s ease !important;
-	margin: 23px auto 14px;
+  border: 1px solid #00364e !important;
+  background-color: #00364e !important;
+  padding: 10px 35px !important;
+  height: auto !important;
+  color: #ffffff !important;
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  border-radius: 5px !important;
+  align-items: center;
+  display: flex !important;
+  transition: 0.5s ease !important;
+  margin: 23px auto 14px;
 }
 
 .cart-payment-button:hover {
-	background-color: $color;
-	color: $color1;
-	transition: 0.5s ease !important;
+  background-color: $color;
+  color: $color1;
+  transition: 0.5s ease !important;
 }

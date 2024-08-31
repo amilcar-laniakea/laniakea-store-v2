@@ -6,7 +6,7 @@ import Home from "@pages/home";
 import DetailProduct from "@pages/detail-product";
 import Categories from "@pages/categories";
 import OrderHistorial from "@pages/order-historial";
-import OrderSuccess from "@pages/order-success";
+import OrderProcess from "@pages/order-process";
 import Cart from "@pages/cart";
 import NotFound from "@pages/not-found";
 
@@ -19,7 +19,7 @@ const Router = () => (
         <Route path="/categories/:id" element={<Categories />} />
         <Route path="/product-detail/:id" element={<DetailProduct />} />
         <Route path="/order-historial" element={<OrderHistorial />} />
-        <Route path="/order-success" element={<OrderSuccess />} />
+        <Route path="/order-process/:status" element={<OrderProcess />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Layout>

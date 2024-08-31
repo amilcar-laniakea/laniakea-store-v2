@@ -1,27 +1,69 @@
 import PropTypes from "prop-types";
 import { useState } from "react";
-import { Button, Modal, Spin } from "antd";
+import { Button, Modal, Spin, notification } from "antd";
 import { LoadingOutlined, CreditCardFilled } from "@ant-design/icons";
 import { ContextGlobalConsumer } from "@context/Global";
 import PaymentModal from "./components/PaymentModal";
+import useServiceAction from "@hooks/useServiceAction";
 import "./style.scss";
-
-import CheckCart from "./services";
 
 const CheckCartModal = ({ cart }) => {
   const { HandleStockCart } = ContextGlobalConsumer();
+
+  const { fetchData } = useServiceAction({
+    collectionName: "laniakea-store-db",
+    autoFetch: false,
+  });
+
   const [isVisible, setVisible] = useState(false);
   const [isModalPayment, setModalPayment] = useState(false);
 
+  const handleNotification = ({ type, description }) => {
+    notification[type]({
+      message: "Aviso:",
+      description: description,
+    });
+  };
+
   const handlePayment = async () => {
+    const cartMirror = [...cart];
     setVisible(true);
-    await CheckCart(cart).then((r) => {
-      if (r.outStock) {
-        HandleStockCart(r.cart);
+
+    const productsList = await fetchData();
+
+    if (productsList && productsList.length > 0) {
+      const updatedCartMirror = cartMirror.reduce((acc, cartItem) => {
+        const product = productsList.find(
+          (product) => product.id === cartItem.id
+        );
+
+        if (product && product.stock < cartItem.quantity)
+          cartItem.outStock = true;
+
+        acc.push(cartItem);
+        return acc;
+      }, []);
+
+      const validOutOfStock = updatedCartMirror.find(
+        (cartItem) => cartItem.outStock
+      );
+
+      if (validOutOfStock) {
+        HandleStockCart(updatedCartMirror);
+        handleNotification({
+          type: "warning",
+          description:
+            "¡Stock Insuficiente en algunos productos de su Carrito de Compras!.",
+        });
       } else {
         setModalPayment(true);
       }
-    });
+    } else {
+      handleNotification({
+        type: "error",
+        description: "Ha ocurrido un error al verificar los productos.",
+      });
+    }
     setVisible(false);
   };
 
@@ -66,5 +108,5 @@ const CheckCartModal = ({ cart }) => {
 export default CheckCartModal;
 
 CheckCartModal.propTypes = {
-  cart: PropTypes.object.isRequired,
+  cart: PropTypes.array.isRequired,
 };

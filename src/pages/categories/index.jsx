@@ -28,7 +28,7 @@ const Categories = () => {
         <h1 className="categories-main-title">Categoría: {id}</h1>
         <Image
           container={"categories-image-container"}
-          class={"categories-image"}
+          classImg={"categories-image"}
           image={data[0].category.image}
           alt={id}
           title={id}
